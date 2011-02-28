@@ -5,9 +5,9 @@ AGPLv3 license.
 Third party content
 -------------------
 
-* jquery terminal (GPLv2): https://github.com/jcubic/jquery.terminal
-** jquery timers
-** jquery mousewheel
-** jquery cookie
+* [jQuery terminal](https://github.com/jcubic/jquery.terminal) (GPLv2)
+ * jQuery timers
+ * jQuery mousewheel
+ * jQuery cookie
 
-* Glowing Social Network Icons (CC-BY): http://www.softicons.com/free-icons/social-media-icons/glowing-social-network-icons-by-aaron-nichols
+* [Glowing Social Network Icons](http://www.softicons.com/free-icons/social-media-icons/glowing-social-network-icons-by-aaron-nichols) (CC-BY)
