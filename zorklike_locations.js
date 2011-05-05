@@ -7,13 +7,13 @@ Location.prototype.look = function(thing) {
 	if (thing in this.visible) {
 		return this.visible[thing];
 	} else {
-		return "You can't see anything there."
+		return "You can't see anything there.";
 	}
-}
+};
 
 Location.prototype.go = function(direction) {
-	throw "You can't go in that direction here."
-}
+	throw "You can't go in that direction here.";
+};
 
 function StartLocation() {
 	this.visible = {up: 'You see the top of text interface, with three tempting links above it.',
@@ -36,7 +36,7 @@ StartLocation.prototype.go = function(direction) {
 	} else {
 		return Location.prototype.go(direction);
 	}
-}
+};
 
 function Meadow() {
 	// set noticeboard message from twitter
@@ -55,7 +55,7 @@ function Meadow() {
 	this.description = "You step through the trapdoor, and blink as your eyes adjust to the bright sunlight. You are standing in a meadow, with a bird cawing in the distance. A noticeboard is here.";
 }
 
-Meadow.prototype = new Location;
+Meadow.prototype = new Location();
 
 Meadow.prototype.go = function(direction) {
 	if (direction === "forward") {
@@ -65,7 +65,7 @@ Meadow.prototype.go = function(direction) {
 	} else {
 		return Location.prototype.go(direction);
 	}
-}
+};
 
 function Hillside() {
 	this.visible = {up: 'The sky is still blue, to be honest.',
@@ -76,7 +76,7 @@ function Hillside() {
 	this.description = "You stride onwards to the hillside, slowing down as the path gets steepier and rockier. The whole area has an unfinished feel to it, somehow.";
 }
 
-Hillside.prototype = new Location;
+Hillside.prototype = new Location();
 
 Hillside.prototype.go = function(direction) {
 	if (direction === "backward") {
@@ -84,7 +84,7 @@ Hillside.prototype.go = function(direction) {
 	} else {
 		return Location.prototype.go(direction);
 	}
-}
+};
 
 function getBrowserName() {
 	// based on http://www.javascripter.net/faq/browsern.htm
