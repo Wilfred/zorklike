@@ -2,6 +2,16 @@ Zorklike is a static home page with a fun integrated text game.
 
 AGPLv3 license.
 
+Building
+--------
+
+    $ lein deps
+    $ lein cljsbuild once
+    
+Or to watch your source code and recompile when it changes:
+
+    $ lein cljsbuild auto
+
 Third party content
 -------------------
 
