@@ -27,7 +27,8 @@ FIXME: can we install fay from hackage?
 
 4: Compile the code. You need to be in the fay directory.
 
-    $ cabal-dev/bin/fay --no-ghc /path/to/zorklike/hello.hs
+    $ export HASKELL_PACKAGE_SANDBOX=cabal-dev/packages-7.6.1.conf
+    $ cabal-dev/bin/fay ~/projects/zorklike/hello.hs
     
 This will write hello.js to the zorklike directory.
 
