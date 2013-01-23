@@ -23,6 +23,14 @@ writeScrollback = ffi "jQuery('.scrollback').append(%1)"
 console_log :: String -> Fay ()
 console_log = ffi "console.log(%1)"
 
+runOnEnter :: Fay () -> Fay ()
+runOnEnter = ffi "jQuery('#prompt').keypress(function(e) { if (e.which == 13) %1() } )"
+
+clearInput :: Fay ()
+clearInput = ffi "jQuery('#prompt').val('')"
+
 main = do
   clearScrollback
   writeScrollback $ describePlace start
+  runOnEnter clearInput
+  
