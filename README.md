@@ -20,7 +20,7 @@ GHC 7.6.1 yet)
 
     $ git clone git://github.com/faylang/fay.git
     $ cd fay
-    $ git checkout 0.11.0.0 # latest release
+    $ git checkout 0.12.0.0 # latest release
     $ cabal-dev install
     
 FIXME: can we install fay from hackage?
