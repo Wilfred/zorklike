@@ -29,8 +29,24 @@ runOnEnter = ffi "jQuery('#prompt').keypress(function(e) { if (e.which == 13) %1
 clearInput :: Fay ()
 clearInput = ffi "jQuery('#prompt').val('')"
 
+getInput :: Fay String
+getInput = ffi "jQuery('#prompt').val()"
+
+data Command = Go
+
+parseInput :: String -> Maybe Command
+parseInput ('g':'o':xs) = Just Go
+parseInput _ = Nothing
+
+respondToCommand = do
+  input <- getInput
+  let command = parseInput input
+  case command of
+    Just Go -> writeScrollback "Go!"
+    _ -> writeScrollback "I don't know how to do that."
+
 main = do
   clearScrollback
   writeScrollback $ describePlace start
-  runOnEnter clearInput
+  runOnEnter respondToCommand
   
