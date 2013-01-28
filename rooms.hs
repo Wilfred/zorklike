@@ -5,7 +5,7 @@ data Place = Place { description :: String, directions :: [String]}
            deriving (Show)
 
 start :: Place
-start = Place {description="You find yourself on a curiously designed website with what looks like\nan interface influenced by text adventure games.",
+start = Place {description="You find yourself on a curiously designed website. It's definitely HTML, but something is... different. You hear movement in the distance, and there's a smell of burning Haskell in the air.\n\nAvailable commands: go",
                directions=["up", "down", "forward"]}
         
 describePlace :: Place -> String
