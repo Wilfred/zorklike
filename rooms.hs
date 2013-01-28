@@ -47,6 +47,7 @@ respondToCommand = do
   case command of
     Just Go -> writeScrollback "Go!"
     _ -> writeScrollback "I don't know how to do that."
+  clearInput
 
 main = do
   clearScrollback
