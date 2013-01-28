@@ -1,5 +1,5 @@
-import Language.Fay.Prelude
-import Language.Fay.FFI
+import Prelude
+import FFI
 
 data Place = Place { description :: String, directions :: [String]} 
            deriving (Show)
