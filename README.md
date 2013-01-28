@@ -31,7 +31,7 @@ FIXME: write a .cabal file for zorklike
     $ export HASKELL_PACKAGE_SANDBOX=cabal-dev/packages-7.6.1.conf
     $ cabal-dev/bin/fay --package fay-base ~/projects/zorklike/rooms.hs
     
-This will write hello.js to the zorklike directory.
+This will write rooms.js to the zorklike directory.
 
 Third party content
 -------------------
