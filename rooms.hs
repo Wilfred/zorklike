@@ -17,8 +17,11 @@ describePlace place = description place ++ "\n\nDirections here: " ++ placeDirec
 clearScrollback :: Fay ()
 clearScrollback = ffi "jQuery('.scrollback').text('')"
 
-writeScrollback :: String -> Fay ()
-writeScrollback = ffi "jQuery('.scrollback').append(%1)"
+writeScrollbackRaw :: String -> Fay ()
+writeScrollbackRaw = ffi "jQuery('.scrollback').append(%1)"
+
+writeScrollback :: String -> Fay()
+writeScrollback = writeScrollbackRaw . (++ "\n\n")
 
 console_log :: String -> Fay ()
 console_log = ffi "console.log(%1)"
